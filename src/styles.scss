@@ -1,1 +1,110 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-dgprimary: (
+  50 : #e7e6f2,
+  100 : #c3c1e0,
+  200 : #9b98cb,
+  300 : #736eb6,
+  400 : #554fa6,
+  500 : #373096,
+  600 : #312b8e,
+  700 : #2a2483,
+  800 : #231e79,
+  900 : #161368,
+  A100 : #a19fff,
+  A200 : #706cff,
+  A400 : #3e39ff,
+  A700 : #251fff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #ffffff,
+      A400 : #ffffff,
+      A700 : #ffffff,
+  )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-dgaccent: (
+    50 : #ffebee,
+    100 : #ffced5,
+    200 : #ffadb9,
+    300 : #ff8c9d,
+    400 : #ff7488,
+    500 : #ff5b73,
+    600 : #ff536b,
+    700 : #ff4960,
+    800 : #ff4056,
+    900 : #ff2f43,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffdade,
+    A700 : #ffc1c6,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$DinmoGlobal-primary: mat.define-palette($md-dgprimary);
+$DinmoGlobal-accent: mat.define-palette($md-dgaccent);
+
+// The warn palette is optional (defaults to red).
+$DinmoGlobal-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$DinmoGlobal-theme: mat.define-light-theme((
+  color: (
+    primary: $DinmoGlobal-primary,
+    accent: $DinmoGlobal-accent,
+    warn: $DinmoGlobal-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($DinmoGlobal-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
