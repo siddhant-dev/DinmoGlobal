@@ -1,0 +1,39 @@
+$dg-primary: #383097;
+$dg-secondary: #ff5b73;
+.landing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    .content {
+        h1 {
+            font-size: 48px;
+        line-height: 2.5rem;
+        font-weight: 500;
+        background: linear-gradient(to left, $dg-primary, $dg-secondary);
+        background-clip: text;
+        color: transparent;
+        }
+    }
+    p{
+        text-align: justify;
+    }
+    button {
+        height: 50px;
+        width: 200px;
+    }
+    img {
+        height: 75vh;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .landing{
+        flex-direction: column;
+        img{
+            width: 75vw;
+            height: auto;
+        }
+    }
+    
+}

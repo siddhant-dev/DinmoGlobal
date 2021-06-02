@@ -1,0 +1,61 @@
+<form [formGroup]="inquiryForm" autocomplete="off">
+    <fieldset>
+        <legend>Send your requirements</legend>
+        <mat-form-field style="padding-top: 2rem;" appearance="outline">
+            <mat-label>
+                Name
+            </mat-label>
+            <input formControlName="name" matInput placeholder="Please enter your name" autocomplete="off"  type="text">
+            <mat-error *ngIf="name.invalid">
+                Please enter your name.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>
+                Email
+            </mat-label>
+            <input formControlName="email" matInput placeholder="Please enter your email" autocomplete="off" type="text">
+            <mat-error *ngIf="email.invalid">
+                Please enter a valid email.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input formControlName="phone" matInput placeholder="Enter your phone number" autocomplete="off">
+            <mat-error *ngIf="name.invalid">
+                Please enter a valid phone number.
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Select Colors</mat-label>
+            <mat-chip-list #colorList aria-label="Color Selection">
+                <mat-chip  
+                *ngFor="let col of colors"
+                [removable]="removable"
+                (removed)="remove(col)"
+                color="primary" selected>
+                    {{col}}
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                
+                <input
+                    placeholder="Select Colors"
+                    #colInput
+                    [matAutocomplete]="auto"
+                    [matChipInputFor]="colorList"
+                    formControlName="colorInput"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    (matChipInputTokenEnd)="add($event)" autocomplete="off">
+            </mat-chip-list>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let col of filteredColors | async" [value]="col">
+                  {{col}}
+                </mat-option>
+              </mat-autocomplete>
+              
+        </mat-form-field>
+        <div>
+            <button mat-stroked-button color="accent" (click)="close()">Cancel</button>
+        </div>
+    </fieldset>
+</form>

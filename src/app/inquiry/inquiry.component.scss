@@ -1,0 +1,25 @@
+// p {
+//     height: 70vh;
+//     width: 70vw;
+// }
+form{
+    width: 50vw;
+}
+fieldset {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgray !important;
+    
+}
+
+legend {
+    font-size: 26px;
+}
+
+@media screen and (max-width: 768px) {
+    form{
+        width: auto;
+    }
+    
+}
