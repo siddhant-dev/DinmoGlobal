@@ -9,12 +9,15 @@ import { LandingComponent } from './landing/landing.component';
 import { InquiryComponent } from './inquiry/inquiry.component';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { ProdSliderComponent } from './prod-slider/prod-slider.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
     InquiryComponent,
+    ProdSliderComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MaterialModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IvyCarouselModule,
     
   ],
   providers: [],

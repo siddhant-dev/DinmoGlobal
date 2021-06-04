@@ -64,14 +64,15 @@ $dg-secondary: #ff5b73;
 
 .navbar {
     padding: 0 5vw !important;
-    background-color: #FAFBFF;
+    background-color: #FAFAFA;
     position: sticky;
     top:0;
+    z-index: 99;
 }
 
 .p-5{
     padding: 5vh 5vw;
-    background-color: #FAFBFF !important;
+    
 }
 
 .flex_nav {

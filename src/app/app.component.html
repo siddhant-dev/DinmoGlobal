@@ -25,7 +25,7 @@
     <mat-toolbar class="navbar" [ngClass]="{flex_nav: (isHandset$ | async)}">
       
       <div class="brand" tabindex="0">
-        <img src="../assets/DINMO LOGO.jpg"  width="50px" alt="">
+        <img src="../assets/DINMO LOGO.png"  width="50px" alt="">
         <a tabindex="-1" href="#">Dinmo <span>Global</span></a>
       </div>
       <div class="nav-links" [ngClass]="{hidden: (isHandset$ | async)}">
@@ -45,6 +45,7 @@
     <!-- Add Content Here -->
     <main class="p-5">
       <app-landing></app-landing>
+      <app-prod-slider></app-prod-slider>
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
