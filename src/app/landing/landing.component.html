@@ -1,4 +1,4 @@
-<div class="landing">
+<div class="landing" id="home">
     <section class="content">
         <h1 tabindex="0">CAR AUTO</h1>
         <p tabindex="0">
@@ -7,8 +7,8 @@
             environmental friendly product formula, including environmental friendly spray paints and cleaning agents.
             We add new variety of products each year. 
         </p>
-        <button mat-raised-button color="primary" (click)="openDialog()">
-            <mat-icon aria-hidden="false" aria-label="Download Brochure">download</mat-icon>&nbsp;&nbsp;DOWNLOAD BROCHURE</button>
+        <a mat-raised-button color="primary" href="../../assets/Dinmo Brochure.pdf" download="Dinmo Brochure.pdf">
+            <mat-icon aria-hidden="false" aria-label="Download Brochure">download</mat-icon>&nbsp;&nbsp;DOWNLOAD BROCHURE</a>
     </section>
     <section>
         <img src="../../assets/car.png" alt="car paint image" width="798" height="600">
@@ -22,25 +22,25 @@
         </p>
         <button tabindex="0" mat-stroked-button color="primary">Read More</button>
     </section>
-    <img tabindex="0" src="../../assets/products/all.PNG" width="1080" height="1080" alt="A bunch of spray paints">
+    <img loading="lazy" tabindex="0" src="../../assets/products/all.PNG" width="1080" height="1080" alt="A bunch of spray paints">
     
 </div>
 <div class="desc">
     <article>
-        <img src="../../assets/Durable-dg.png" width="100px" height="100px" alt="durable">
-        <p>
+        <img tabindex="0" loading="lazy" src="../../assets/Durable-dg.png" width="100px" height="100px" alt="durable">
+        <p tabindex="0">
             The most durable paints out there and last upto 3 years. 
         </p>
     </article>
     <article>
-        <img src="../../assets/quick-dg.png" width="100px" height="100px" alt="quick dry">
-        <p>
+        <img tabindex="0" loading="lazy" src="../../assets/quick-dg.png" width="100px" height="100px" alt="quick dry">
+        <p tabindex="0">
             Car Auto Spray Paints comes with quick dry technology dries in less than a minute saving your time.   
         </p>
     </article>
     <article>
-        <img src="../../assets/Shine-dg.png" width="100px" height="100px" alt="shine">
-        <p>
+        <img tabindex="0" loading="lazy" src="../../assets/Shine-dg.png" width="100px" height="100px" alt="shine">
+        <p tabindex="0">
             Get a premium quality finish from the first coat. Paints are mixed with lacquer to ensure shinny finish.
         </p>
     </article>
@@ -50,25 +50,25 @@
 <app-prod-slider></app-prod-slider>
 
 <div class="testimonials">
-    <h1>Our Customers Speak</h1>
+    <h1 tabindex="0">Our Customers Speak</h1>
     <div class="reviews">
         <div *ngFor="let num of [0,1,2]">
-            <img src="../../assets/Group 1.png" alt="Customer Feedback" width="498" height="498">
+            <img tabindex="0" loading="lazy" src="../../assets/Group 1.png" alt="Customer Feedback" width="498" height="498">
         </div>
     </div>
 </div>
 
 <div class="faqs">
-    <h1>FAQs</h1>
+    <h1 tabindex="0">FAQs</h1>
     <section>
         <mat-accordion multi>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
-                    <mat-panel-title>
+                    <mat-panel-title >
                         FAQ Question 1?
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>Answer for the question</p>
+                <p tabindex="0">Answer for the question</p>
             </mat-expansion-panel>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
@@ -76,7 +76,7 @@
                         FAQ Question 1?
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>Answer for the question</p>
+                <p tabindex="0">Answer for the question</p>
             </mat-expansion-panel>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
@@ -84,7 +84,7 @@
                         FAQ Question 1?
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>Answer for the question</p>
+                <p tabindex="0">Answer for the question</p>
             </mat-expansion-panel>
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
@@ -92,7 +92,7 @@
                         FAQ Question 1?
                     </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>Answer for the question</p>
+                <p tabindex="0">Answer for the question</p>
             </mat-expansion-panel>
         </mat-accordion>
     </section>

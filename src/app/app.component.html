@@ -16,9 +16,9 @@
       </button>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="/products" >OUR PRODUCTS</a>
+      <a mat-list-item href="#">ABOUT US</a>
+      <a mat-list-item routerLink="/contacts">CONTACT US</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -26,12 +26,12 @@
       
       <div class="brand" tabindex="0">
         <img src="../assets/DINMO LOGO.png"  width="50px" alt="">
-        <a tabindex="-1" href="#">Dinmo <span>Global</span></a>
+        <a tabindex="-1" routerLink="/" fragment="home">Dinmo <span>Global</span></a>
       </div>
       <div class="nav-links" [ngClass]="{hidden: (isHandset$ | async)}">
-        <a href="#">OUR PRODUCTS</a>
+        <a routerLink="/products">OUR PRODUCTS</a>
         <a href="#">ABOUT US</a>
-        <a href="#">CONTACT US</a>
+        <a routerLink="/contacts">CONTACT US</a>
       </div>
       <button
         type="button"
@@ -44,7 +44,7 @@
     </mat-toolbar>
     <!-- Add Content Here -->
     <main class="p-5">
-      <app-landing></app-landing>
+      <router-outlet></router-outlet>
     </main>
     <footer>
       <div class="nav-links" >

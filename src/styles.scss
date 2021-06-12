@@ -106,12 +106,30 @@ $DinmoGlobal-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { 
+  height: 100%; 
+  scrollbar-width: thin;
+  scrollbar-color: #ff5b73 lighten(#ff5b73, 20%);
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .carousel-dot{
   border-color: #ff5b73 !important;
+  
 }
 
 .carousel-dot-active {
   background-color: #ff536b !important;
+}
+
+::-webkit-scrollbar{
+  width: .5rem;
+}
+::-webkit-scrollbar-thumb{
+  background-color:#ff536b;
+}
+::-webkit-scrollbar-track {
+  background-color: lighten(#ff536b, $amount: 20%);
+}
+.mat-drawer-content {
+  scrollbar-width: thin !important;
 }

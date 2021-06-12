@@ -3,7 +3,7 @@ import {Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {MatAutocompleteSelectedEvent, MatAutocomplete} from '@angular/material/autocomplete';
 import {MatChipInputEvent, MatChipList} from '@angular/material/chips';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+// import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
@@ -26,8 +26,7 @@ export class InquiryComponent implements OnInit {
   colInput!: ElementRef<HTMLInputElement>;
   @ViewChild('auto') matAutocomplete: MatAutocomplete | undefined;
 
-  constructor(public dialogRef: MatDialogRef<InquiryComponent>, private fb: FormBuilder,
-    @Inject(MAT_DIALOG_DATA) public data: string, ) {}
+  constructor(private fb: FormBuilder) {}
   ngOnInit() {
     this.buildForm();
   }
@@ -58,10 +57,10 @@ export class InquiryComponent implements OnInit {
   get email() {
     return this.inquiryForm.get('email');
   }
-  close() {
-    console.log(this.inquiryForm.value);
-    this.dialogRef.close();
-  }
+  // close() {
+  //   console.log(this.inquiryForm.value);
+  //   this.dialogRef.close();
+  // }
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();

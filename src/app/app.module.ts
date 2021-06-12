@@ -11,6 +11,7 @@ import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { ProdSliderComponent } from './prod-slider/prod-slider.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProdSliderComponent } from './prod-slider/prod-slider.component';
     LandingComponent,
     InquiryComponent,
     ProdSliderComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

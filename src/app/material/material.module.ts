@@ -13,6 +13,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridListModule  } from '@angular/material/grid-list';
+import { MatTabsModule  } from '@angular/material/tabs';
+
+
+
 
 
 
@@ -35,6 +40,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatFormFieldModule,
     MatInputModule,
     MatExpansionModule,
+    MatGridListModule,
+    MatTabsModule,
   ], 
   exports: [
     CommonModule,
@@ -52,6 +59,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatFormFieldModule,
     MatInputModule,
     MatExpansionModule,
+    MatGridListModule,
+    MatTabsModule,
 
   ]
 })

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { InquiryComponent } from '../inquiry/inquiry.component';
 
 @Component({
   selector: 'app-landing',
@@ -9,13 +7,9 @@ import { InquiryComponent } from '../inquiry/inquiry.component';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  openDialog() {
-    const dialogRef = this.dialog.open(InquiryComponent);
   }
 
 }
