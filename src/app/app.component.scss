@@ -1,5 +1,4 @@
-$dg-primary: #373096;
-$dg-secondary: #ff5b73;
+@import "~src/utlity";
 
 .sidenav-container {
   height: 100%;
@@ -67,7 +66,7 @@ $dg-secondary: #ff5b73;
     background-color: #FAFAFA;
     position: sticky;
     top:0;
-    z-index: 99;
+    z-index: 999999;
 }
 
 .p-5{
@@ -80,5 +79,21 @@ $dg-secondary: #ff5b73;
   justify-content: space-between;
   align-items: center;
   padding: 0 5vw;
+}
+
+footer {
+  padding: 5vh 5vw;
+  // background-color: lighten($dg-secondary, $amount: 10%);
+  background-color: $dg-secondary;
+  // height: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  color: whitesmoke;
+  .nav-links{
+    width: 100%;
+  }
 }
 

@@ -29,9 +29,9 @@
         <a tabindex="-1" href="#">Dinmo <span>Global</span></a>
       </div>
       <div class="nav-links" [ngClass]="{hidden: (isHandset$ | async)}">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+        <a href="#">OUR PRODUCTS</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT US</a>
       </div>
       <button
         type="button"
@@ -45,7 +45,18 @@
     <!-- Add Content Here -->
     <main class="p-5">
       <app-landing></app-landing>
-      <app-prod-slider></app-prod-slider>
     </main>
+    <footer>
+      <div class="nav-links" >
+        <a style="color: whitesmoke;" href="#">OUR PRODUCTS</a>|
+        <a style="color: whitesmoke;" href="#">ABOUT US</a>|
+        <a style="color: whitesmoke;"href="#">CONTACT US</a>
+      </div>
+     <p>
+      © Dinmo Global Pvt Ltd. All rights reserved.
+      Developed by @siddhant-dev
+     </p>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
+

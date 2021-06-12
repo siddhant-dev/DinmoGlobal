@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prod-slider.component.scss']
 })
 export class ProdSliderComponent implements OnInit {
-  images= [{path: '../../assets/products/1.png'},
+  images= [
   {path: '../../assets/products/2.png'},
   {path: '../../assets/products/3.png'},
   {path: '../../assets/products/4.png'},

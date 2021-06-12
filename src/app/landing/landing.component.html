@@ -7,11 +7,23 @@
             environmental friendly product formula, including environmental friendly spray paints and cleaning agents.
             We add new variety of products each year. 
         </p>
-        <button mat-raised-button color="primary" (click)="openDialog()"><span>GET QUOTE</span></button>
+        <button mat-raised-button color="primary" (click)="openDialog()">
+            <mat-icon aria-hidden="false" aria-label="Download Brochure">download</mat-icon>&nbsp;&nbsp;DOWNLOAD BROCHURE</button>
     </section>
     <section>
-        <img src="../../assets/car.png" alt="car paint image">
+        <img src="../../assets/car.png" alt="car paint image" width="798" height="600">
     </section>
+</div>
+<div class="about">
+    <section>
+        <h1 tabindex="0">About Us</h1>
+        <p tabindex="0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in nisl quis velit ullamcorper vulputate a a nibh. Proin quis tempus tellus. Quisque vel condimentum lectus. Donec pulvinar ornare nisl ac ultricies. Aenean purus diam, lacinia id tempor ultrices, volutpat et elit. Mauris dictum blandit ante, condimentum fringilla nunc tincidunt et. Donec vitae venenatis nunc. Nulla pellentesque porta enim id bibendum. Suspendisse elit odio, iaculis eu vulputate sed, vehicula eget ipsum. Curabitur porta posuere nulla quis pellentesque. Integer id metus risus. Praesent nec est purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In ullamcorper tincidunt. 
+        </p>
+        <button tabindex="0" mat-stroked-button color="primary">Read More</button>
+    </section>
+    <img tabindex="0" src="../../assets/products/all.PNG" width="1080" height="1080" alt="A bunch of spray paints">
+    
 </div>
 <div class="desc">
     <article>
@@ -33,4 +45,55 @@
         </p>
     </article>
 
+</div>
+
+<app-prod-slider></app-prod-slider>
+
+<div class="testimonials">
+    <h1>Our Customers Speak</h1>
+    <div class="reviews">
+        <div *ngFor="let num of [0,1,2]">
+            <img src="../../assets/Group 1.png" alt="Customer Feedback" width="498" height="498">
+        </div>
+    </div>
+</div>
+
+<div class="faqs">
+    <h1>FAQs</h1>
+    <section>
+        <mat-accordion multi>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        FAQ Question 1?
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Answer for the question</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        FAQ Question 1?
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Answer for the question</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        FAQ Question 1?
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Answer for the question</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        FAQ Question 1?
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>Answer for the question</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </section>
 </div>

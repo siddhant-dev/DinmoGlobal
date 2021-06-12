@@ -2,19 +2,21 @@
 //     height: 70vh;
 //     width: 70vw;
 // }
+@import "~src/utlity";
+
 form{
+
     width: 50vw;
 }
-fieldset {
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid lightgray !important;
-    
-}
 
-legend {
-    font-size: 26px;
+mat-dialog-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    mat-form-field {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
