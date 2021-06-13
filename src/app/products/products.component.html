@@ -7,17 +7,142 @@
             </mat-grid-tile>
         </mat-grid-list>
     </mat-tab>
-    <mat-tab tabindex="0" label="Colors List">
-        <mat-grid-list [cols]="(isHandset$ | async) ? 2: 6" rowHeight="1:1">
-            <mat-grid-tile *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
-                <div class="circle">
-
-                </div>
-                <div class="color-desc">
-                    Mat Black
-                </div>
-            </mat-grid-tile>
-        </mat-grid-list>
+    <mat-tab tabindex="0" label="Colors List"> 
+        <ng-template matTabContent>
+            <br>
+            <mat-accordion>
+                <mat-expansion-panel >
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Normal Spray Paint Colors
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-grid-list [cols]="(isHandset$ | async) ? 2: 6" [rowHeight]=rowHeight >
+                        <mat-grid-tile *ngFor="let i of normal">
+                            <div class="colors">
+                                <div class="circle" [ngStyle]="{'background-color':i.value}">
+            
+                                </div>
+                                <div class="color-desc">
+                                    <span>{{i.index}}</span><br>
+                                    <span>{{i.name}}</span>
+                
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Metallic and Flash Spray Paint Colors
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-grid-list [cols]="(isHandset$ | async) ? 2: 6" [rowHeight]=rowHeight >
+                        <mat-grid-tile *ngFor="let i of metallic">
+                            <div class="colors">
+                                <div class="circle" [ngStyle]="{'background-color':i.value}">
+            
+                                </div>
+                                <div class="color-desc">
+                                    <span>{{i.index}}</span><br>
+                                    <span>{{i.name}}</span>
+                
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel expanded>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Fluorescent Spray Paint Colors
+                        </mat-panel-title>
+    
+                    </mat-expansion-panel-header>
+                    <mat-grid-list [cols]="(isHandset$ | async) ? 2: 6" [rowHeight]=rowHeight >
+                        <mat-grid-tile *ngFor="let i of fluorescent">
+                            <div class="colors">
+                                <div class="circle" [ngStyle]="{'background-color':i.value}">
+            
+                                </div>
+                                <div class="color-desc">
+                                    <span>{{i.index}}</span><br>
+                                    <span>{{i.name}}</span>
+                
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel >
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Electroplating Spray Paint Colors
+                        </mat-panel-title>
+    
+                    </mat-expansion-panel-header>
+                    <mat-grid-list [cols]="(isHandset$ | async) ? 2: 6" [rowHeight]=rowHeight >
+                        <mat-grid-tile *ngFor="let i of electro">
+                            <div class="colors">
+                                <div class="circle" [ngStyle]="{'background-color':i.value}">
+            
+                                </div>
+                                <div class="color-desc">
+                                    <span>{{i.index}}</span><br>
+                                    <span>{{i.name}}</span>
+                
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            High Heat Spray Paint Colors
+                        </mat-panel-title>
+    
+                    </mat-expansion-panel-header>
+                    <mat-grid-list [cols]="(isHandset$ | async) ? 2: 6" [rowHeight]=rowHeight >
+                        <mat-grid-tile *ngFor="let i of heat">
+                            <div class="colors">
+                                <div class="circle" [ngStyle]="{'background-color':i.value}">
+            
+                                </div>
+                                <div class="color-desc">
+                                    <span>{{i.index}}</span><br>
+                                    <span>{{i.name}}</span>
+                
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Primer Spray Paint Colors
+                        </mat-panel-title>
+    
+                    </mat-expansion-panel-header>
+                    <mat-grid-list [cols]="(isHandset$ | async) ? 2: 6" [rowHeight]=rowHeight>
+                        <mat-grid-tile *ngFor="let i of primer">
+                            <div class="colors">
+                                <div class="circle" [ngStyle]="{'background-color':i.value}">
+            
+                                </div>
+                                <div class="color-desc">
+                                    <span>{{i.index}}</span><br>
+                                    <span>{{i.name}}</span>
+                
+                                </div>
+                            </div>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </ng-template>
     </mat-tab>
 
 </mat-tab-group>

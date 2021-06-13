@@ -16,9 +16,9 @@
       </button>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/products" >OUR PRODUCTS</a>
-      <a mat-list-item href="#">ABOUT US</a>
-      <a mat-list-item routerLink="/contacts">CONTACT US</a>
+      <a mat-list-item routerLink="/products" (click)="drawer.toggle()" >OUR PRODUCTS</a>
+      <a mat-list-item routerLink="/about" (click)="drawer.toggle()">ABOUT US</a>
+      <a mat-list-item routerLink="/contacts" (click)="drawer.toggle()">CONTACT US</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -26,12 +26,12 @@
       
       <div class="brand" tabindex="0">
         <img src="../assets/DINMO LOGO.png"  width="50px" alt="">
-        <a tabindex="-1" routerLink="/" fragment="home">Dinmo <span>Global</span></a>
+        <a tabindex="-1" routerLink="/">Dinmo <span>Global</span></a>
       </div>
       <div class="nav-links" [ngClass]="{hidden: (isHandset$ | async)}">
-        <a routerLink="/products">OUR PRODUCTS</a>
-        <a href="#">ABOUT US</a>
-        <a routerLink="/contacts">CONTACT US</a>
+        <a routerLink="/products" routerLinkActive="active">OUR PRODUCTS</a>
+        <a routerLink="/about" routerLinkActive="active">ABOUT US</a>
+        <a routerLink="/contacts" routerLinkActive="active">CONTACT US</a>
       </div>
       <button
         type="button"
@@ -43,20 +43,24 @@
       </button>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <main class="p-5">
-      <router-outlet></router-outlet>
-    </main>
-    <footer>
-      <div class="nav-links" >
-        <a style="color: whitesmoke;" href="#">OUR PRODUCTS</a>|
-        <a style="color: whitesmoke;" href="#">ABOUT US</a>|
-        <a style="color: whitesmoke;"href="#">CONTACT US</a>
-      </div>
-     <p>
-      © Dinmo Global Pvt Ltd. All rights reserved.
-      Developed by @siddhant-dev
-     </p>
-    </footer>
+    <div class="flexi">
+      <main class="p-5">
+        <router-outlet></router-outlet>
+        
+      </main>
+      <footer>
+        <div class="nav-links" >
+          <a style="color: whitesmoke;" href="#">OUR PRODUCTS</a>|
+          <a style="color: whitesmoke;" href="#">ABOUT US</a>|
+          <a style="color: whitesmoke;"href="#">CONTACT US</a>
+        </div>
+       <p>
+        © Dinmo Global Pvt Ltd. All rights reserved.
+        Developed by @siddhant-dev
+       </p>
+      </footer>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
 

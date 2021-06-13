@@ -1,7 +1,5 @@
-<h2 mat-dialog-title>Send your requirements</h2>
+<h1>Send your requirements</h1>
 <form [formGroup]="inquiryForm" autocomplete="off">
-        
-        <mat-dialog-content >
             <mat-form-field  appearance="outline">
                 <mat-label>
                     Name
@@ -55,10 +53,15 @@
                   </mat-autocomplete>
                   
             </mat-form-field>
-        </mat-dialog-content>
+            <mat-form-field  appearance="outline">
+                <mat-label>
+                    Requirements
+                </mat-label>
+                <textarea formControlName="requirements" matInput placeholder="Please enter your requirements" autocomplete="off"  type="text"></textarea>
+            </mat-form-field>
         
-        <mat-dialog-actions align="end">
+       
             <button bmat-stroked-button mat-stroked-button color="accent">Cancel</button>
             <button mat-raised-button color="primary" [disabled]="inquiryForm.invalid">Send</button>
-        </mat-dialog-actions>
+
 </form>

@@ -38,6 +38,7 @@ export class InquiryComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       colorInput: [null],
       selectedColor: [this.colors],
+      requirements:['']
     });
 
     this.filteredColors = this.inquiryForm.get('colorInput').valueChanges

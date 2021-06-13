@@ -2,6 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { normal, metallic, electroplating, heat, fluorescent, primer} from '../data'
 
 @Component({
   selector: 'app-products',
@@ -14,6 +15,13 @@ export class ProductsComponent implements OnInit {
       map(result => result.matches),
       shareReplay()
     );
+    normal = normal;
+    metallic = metallic;
+    electro = electroplating;
+    heat = heat;
+    fluorescent = fluorescent;
+    primer = primer;
+    rowHeight = "180px";
     images= [
       {path: '../../assets/products/2.png'},
       {path: '../../assets/products/3.png'},

@@ -1,7 +1,15 @@
 .circle {
-    display: inline-block;
+    display: block;
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    background-color: red;
+}
+
+.colors {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    .color-desc {
+        text-align: center;
+    }
 }
